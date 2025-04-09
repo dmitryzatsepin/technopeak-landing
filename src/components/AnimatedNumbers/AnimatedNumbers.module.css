@@ -1,0 +1,28 @@
+.section {
+    padding: 80px 0;
+    background-color: var(--mantine-color-white);
+  }
+  
+  .digitBox {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .digit {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--mantine-color-gray-8);
+    margin-bottom: 10px;
+  }
+
+  .icon {
+    font-size: 40px;
+    color: var(--accent-green);
+    margin-bottom: 10px;
+  }
+  
+  .label {
+    font-size: 1.2em;
+    color: var(--mantine-color-gray-8);
+    margin-bottom: 20px;
+  }

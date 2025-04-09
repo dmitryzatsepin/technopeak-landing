@@ -1,0 +1,12 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+:root {
+    --accent-pink: #ff006e;
+    --accent-green: #00C5B3;
+  }
+  

@@ -1,0 +1,25 @@
+.wrapper {
+  /* Добавь общие стили для секции если нужно */
+  background-color: var(--mantine-color-gray-0); /* Пример фона для светлой темы */
+  /* Добавь селектор для темной темы, если нужно */
+  /* :global([data-mantine-color-scheme='dark']) & { background-color: var(--mantine-color-dark-6); } */
+}
+
+.card {
+  border-radius: 0 !important;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: var(--mantine-shadow-xl);
+  }
+}
+
+.learnMoreButton {
+    border-color: var(--accent-green);
+    color: var(--accent-green);
+}
+.learnMoreButton:hover {
+    background-color: var(--accent-green);
+    color: white;
+}

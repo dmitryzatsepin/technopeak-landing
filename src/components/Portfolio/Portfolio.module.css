@@ -1,0 +1,18 @@
+.card {
+    transition: transform 150ms ease, box-shadow 150ms ease;
+    /* Добавь стили для карточки если нужно */
+    &:hover {
+        transform: scale(1.02);
+        box-shadow: var(--mantine-shadow-md);
+    }
+}
+
+.viewCaseButton {
+    border-color: var(--accent-green);
+    color: var(--accent-green);
+    background-color: var(--mantine-white);
+}
+.viewCaseButton:hover {
+    background-color: var(--accent-green);
+    color: white;
+}

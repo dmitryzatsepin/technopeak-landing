@@ -1,0 +1,33 @@
+.wrapper {
+    /* Пример градиентного фона - настройте цвета под ваш дизайн */
+    background: linear-gradient(45deg, var(--mantine-color-blue-6), var(--mantine-color-cyan-4));
+    padding: calc(var(--mantine-spacing-xl) * 1.5) 0;
+    color: var(--mantine-color-white); /* Белый текст по умолчанию */
+  }
+  
+  .content {
+    text-align: center;
+    max-width: rem(700px); /* Ограничиваем ширину контента */
+  }
+  
+  .title {
+    color: var(--mantine-color-white);
+    font-size: rem(40px);
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: var(--mantine-spacing-md);
+  
+    @media (max-width: var(--mantine-breakpoint-sm)) {
+      font-size: rem(28px);
+    }
+  }
+  
+  .description {
+    opacity: 0.9;
+    margin-bottom: var(--mantine-spacing-xl);
+  }
+  
+  .button {
+    /* Дополнительные стили для кнопки, если нужно */
+    box-shadow: var(--mantine-shadow-md);
+  }

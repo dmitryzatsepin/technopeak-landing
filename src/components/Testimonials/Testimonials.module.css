@@ -1,0 +1,22 @@
+  .testimonial {
+    /* Доп. стили для блока цитаты, если нужно */
+    background-color: var(--mantine-color-body);
+    padding: var(--mantine-spacing-lg);
+    border-radius: var(--mantine-radius-md);
+    border-left: rem(3px) solid var(--mantine-color-blue-6); /* Пример линии слева */
+  }
+
+
+.testimonial {
+     border-radius: 0 !important; /* Если у Blockquote есть радиус */
+     border-left-color: var(--accent-green) !important; /* Обновляем цвет линии */
+}
+  .testimonial blockquote {
+    border-left-color: var(--accent-green) !important; /* Обновляем цвет линии */
+  }
+  .testimonial blockquote p {
+    color: var(--mantine-color-gray-7); /* Цвет текста цитаты */
+  }
+  .testimonial blockquote footer {
+    color: var(--mantine-color-gray-6); /* Цвет текста автора */
+  }

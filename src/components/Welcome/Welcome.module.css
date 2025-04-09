@@ -1,0 +1,48 @@
+.container {
+  width: 100%;
+}
+
+.title {
+  color: var(--mantine-color-white);
+  font-size: rem(80px);
+  font-weight: 900;
+  letter-spacing: rem(-2px);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: rem(50px);
+  }
+}
+
+.textWhite {
+  color: var(--mantine-color-white);
+}
+
+.textGray {
+  color: var(--mantine-color-white);
+}
+
+.button {
+  width: 180px;
+  height: 60px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-right: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  border: 2px solid var(--mantine-color-white);
+  color: var(--mantine-color-white);
+}
+
+.button:hover{
+  background: var(--accent-green);
+  border: 2px solid var(--accent-green);
+  color: var(--mantine-color-white);
+}
+
+.debugBorder {
+  border: 2px dashed red;
+}
