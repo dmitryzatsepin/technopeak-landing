@@ -32,8 +32,19 @@ const accentGreen: MantineColorsTuple = [
 
 export const theme = createTheme({
   /* Добавьте сюда другие глобальные настройки темы */
-  // fontFamily: 'Verdana, sans-serif', // Пример: смена шрифта
-
+  fontFamily: `'Graphik LCG', sans-serif`, // Базовый шрифт для текста (<Text>, <Button>, etc.)
+  headings: {
+    fontFamily: `'Navigo', sans-serif`, // Шрифт для заголовков (<Title>)
+    // Можно задать вес по умолчанию для разных уровней заголовков
+    // fontWeight: '500', // Например, все заголовки Medium по умолчанию
+    sizes: {
+    h1: { fontWeight: '700' }, // h1 будет Bold
+    h2: { fontWeight: '500' }, // h2 будет Medium
+    h3: { fontWeight: '200' }, // h3 будет Regular
+    h4: { fontWeight: '200' }, // h4 будет Regular
+    h5: { fontWeight: '200' }, // h5 будет Regular
+  },
+  },
   // Устанавливаем основной цвет (например, для кнопок без явного color)
   primaryColor: 'accentPink',
 

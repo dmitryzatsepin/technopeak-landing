@@ -1,3 +1,4 @@
+/* src/components/Portfolio/Portfolio.module.css */
 .card {
     transition: transform 150ms ease, box-shadow 150ms ease;
     /* Добавь стили для карточки если нужно */
@@ -16,3 +17,30 @@
     background-color: var(--accent-green);
     color: white;
 }
+
+.wrapper {
+    background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-8));
+   }
+   
+   
+   .card:hover {
+     transform: translateY(-5px);
+     box-shadow: var(--mantine-shadow-md);
+   }
+   
+   .cardTitle {
+     font-size: var(--mantine-font-size-lg);
+   }
+   
+   .cardDescription {
+     flex-grow: 1;
+     margin-bottom: var(--mantine-spacing-md);
+   }
+   
+   .sectionTitle {
+     margin-bottom: var(--mantine-spacing-xs); /* Уменьшим отступ после заголовка */
+   }
+   
+   /* .sectionSubtitle {
+    Стили для подзаголовка
+   } */

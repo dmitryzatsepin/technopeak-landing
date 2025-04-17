@@ -12,7 +12,7 @@ const faqData = [
     value: 'crm-platforms',
     question: 'Which CRM platforms do you specialize in?',
     answer:
-      'We specialize in major CRM platforms like Salesforce, Microsoft Dynamics 365, HubSpot, and Zoho CRM, offering customization and integration services for each.',
+      'We specialize in Bitrix24 CRM platform, offering customization and integration services for each.',
   },
   {
     value: 'support',

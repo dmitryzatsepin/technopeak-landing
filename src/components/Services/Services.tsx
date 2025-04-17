@@ -6,19 +6,19 @@ import classes from './Services.module.css'; // Создай этот CSS-мод
 const solutionsData = [
   {
     icon: IconCpu,
-    title: 'CRM Implementation',
+    title: 'Government',
     description: 'Seamless integration and customization of leading CRM platforms to fit your business needs perfectly.',
     link: '/solutions/crm-implementation', // Ссылка на детальную страницу (если есть)
   },
   {
     icon: IconDatabase,
-    title: 'Data Migration & Management',
+    title: 'Real Estate Developer',
     description: 'Secure and efficient data migration services, ensuring data integrity and accessibility.',
     link: '/solutions/data-migration',
   },
   {
     icon: IconCloudComputing,
-    title: 'Cloud Solutions',
+    title: 'Real Estate Brokerage',
     description: 'Leverage the power of the cloud with our expert consultation and implementation services.',
     link: '/solutions/cloud',
   },

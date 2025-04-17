@@ -78,16 +78,15 @@ export function Footer() {
               {/* Колонка 1: Лого и описание */}
               <Stack>
                 <Image src={Logo} alt="TECHNOPEAK Logo" h={40} w="auto" fit="contain" />
-                <Text size="xs" c="dimmed" className={classes.description}>
+                {/* <Text size="xs" c="dimmed" className={classes.description}>
                   Your trusted CRM Integrator in the Middle East, driving digital transformation.
-                </Text>
+                </Text> */}
               </Stack>
 
               {/* Колонка 2: Навигация */}
               <Stack>
                 <Text fw={500}>Navigation</Text>
                 {mainLinks}
-                 {/* Ссылка на форму контактов */}
                  <ScrollLink to="contact-form" smooth duration={800} style={{ textDecoration: 'none' }}>
                     <Anchor component="button" type="button" c="dimmed" size="sm" className={classes.link}>
                       Contact Form
@@ -139,16 +138,14 @@ export function Footer() {
         </div>
 
         {/* --- Раздел Формы Контактов --- */}
-        <Box className={classes.formSection} mt="xl" pt="xl" id="contact-form"> {/* <-- ID для прокрутки */}
+        {/* <Box className={classes.formSection} mt="xl" pt="xl" id="contact-form">
            <Grid gutter="xl">
               <Grid.Col span={{ base: 12, md: 5 }}>
                 <Title order={2} mb="md">Get in Touch</Title>
                 <Text c="dimmed" mb="lg">
                   Have a project in mind or just want to say hi? Fill out the form and we'll get back to you soon.
                 </Text>
-                {/* Можно добавить еще контактную информацию здесь, если нужно */}
               </Grid.Col>
-
               <Grid.Col span={{ base: 12, md: 7 }}>
                 <form onSubmit={form.onSubmit(handleSubmit)}>
                   <Stack>
@@ -181,7 +178,7 @@ export function Footer() {
                 </form>
               </Grid.Col>
            </Grid>
-        </Box>
+        </Box> */}
 
         {/* --- Нижняя часть футера --- */}
         <div className={classes.afterFooter}>
