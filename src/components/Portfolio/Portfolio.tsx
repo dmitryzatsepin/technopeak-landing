@@ -1,6 +1,6 @@
 // src/components/Portfolio/Portfolio.tsx
 
-import { Container, Title, Text, SimpleGrid, Card, Image, Badge, Stack,Button, Group, rem } from '@mantine/core';
+import { Container, Title, Text, SimpleGrid, Card, Image, Badge, Stack,Button, Box, rem } from '@mantine/core';
 import { IconArrowRight } from '@tabler/icons-react';
 import classes from './Portfolio.module.css'; // Убедитесь, что этот файл существует и содержит необходимые классы
 
@@ -106,34 +106,36 @@ export function Portfolio() {
 
   return (
     // Контейнер секции
-    <Container size="xl" py="xl" className={classes.wrapper} id="portfolio">
-      <Title
-        order={2}
-        ta="center"
-        mt="sm"
-        fw={700}
-        className={classes.sectionTitle}
-      >
-        Our Latest Cases
-      </Title>
-      <Text
-        c="dimmed"
-        ta="center"
-        mt="md"
-        mb="xl"
-        fw={300}
-        className={classes.sectionSubtitle}
-      >
-        See how we've helped businesses like yours succeed with our innovative solutions.
-      </Text>
+    <Box className={classes.wrapper} id="portfolio">
+      {/* Внутренний Container для контента */}
+      <Container size="xl" py="xl">
+        <Title
+          order={2}
+          ta="center"
+          mt="sm"
+          fw={700}
+          className={classes.sectionTitle}
+        >
+          Our Latest Cases
+        </Title>
+        <Text
+          c="dimmed"
+          ta="center"
+          mt="md"
+          mb="xl"
+          fw={300}
+          className={classes.sectionSubtitle}
+        >
+          See how we've helped businesses like yours succeed with our innovative solutions.
+        </Text>
 
-      {/* Сетка для карточек */}
-      <SimpleGrid
-        cols={{ base: 1, sm: 2, lg: 3 }}
-        spacing="lg"
-      >
-        {caseCards}
-      </SimpleGrid>
-    </Container>
+        <SimpleGrid
+          cols={{ base: 1, sm: 2, lg: 3 }}
+          spacing="lg"
+        >
+          {caseCards}
+        </SimpleGrid>
+      </Container>
+    </Box>
   );
 }

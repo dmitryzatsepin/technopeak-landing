@@ -7,6 +7,7 @@ import { Box } from '@mantine/core';
 import { AppHeader } from '../components/Header/Header';
 import { HeroSection } from '../components/HeroSection/HeroSection';
 import { AnimatedNumbers } from '../components/AnimatedNumbers/AnimatedNumbers';
+import { LocationsMap } from '../components/LocationsMap/LocationsMap';
 import { TimelineSlider } from '../components/TimelineSlider/TimelineSlider';
 import { Services } from '../components/Services/Services';
 import { CallToAction } from '../components/CallToAction/CallToAction';
@@ -25,9 +26,12 @@ export function HomePage() {
       <Box component="section" id="numbers">
         <AnimatedNumbers />
       </Box>
-      <Box component="section" id="history">
-        <TimelineSlider />
+      <Box component="section" id="locations">
+         <LocationsMap title="Find Us Across The Globe" /> {/* <-- Используем компонент */}
       </Box>
+      {/* <Box component="section" id="history">
+        <TimelineSlider />
+      </Box> */}
       <Box component="section" id="services">
         <Services />
       </Box>

@@ -1,0 +1,53 @@
+/* src/components/LocationsMap/LocationsMap.module.css */
+
+.wrapper {
+    /* Стили для всей секции, например, фон */
+    /* background-color: var(--mantine-color-gray-0); */
+    padding-top: var(--mantine-spacing-xl);
+    padding-bottom: var(--mantine-spacing-xl);
+  
+    [data-mantine-color-scheme] &[data-mantine-color-scheme='dark'] {
+       background-color: var(--mantine-color-dark-7);
+    }
+  }
+  
+  .mapContainer {
+    position: relative;
+    max-width: 1200px; /* Ограничь максимальную ширину, если нужно */
+    margin: 0 auto; /* Центрирование контейнера карты */
+  }
+  
+  .mapImage {
+    display: block; /* Убирает лишний отступ под изображением */
+    width: 100%;
+    height: auto; /* Сохраняет пропорции */
+    user-select: none; /* Запретить выделение карты */
+  }
+  
+  .marker {
+    position: absolute;
+    /* Смещаем маркер так, чтобы его кончик был на координатах */
+    transform: translate(-50%, -100%);
+    /* Убираем стандартные стили ActionIcon если они мешают */
+    border: none;
+    padding: 0;
+    background-color: transparent !important; /* Убедимся что фон прозрачный */
+  
+    /* Эффект при наведении */
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer; /* Указываем что элемент кликабельный */
+  
+    &:hover {
+       transform: translate(-50%, -100%) scale(1.2); /* Немного увеличиваем при наведении */
+    }
+  
+    /* Стили для самой иконки внутри ActionIcon задаются через props color/size */
+  }
+  
+  .popoverDropdown {
+     /* Можно задать максимальную ширину для поповера */
+     max-width: 250px;
+  }
+  
+  /* Дополнительные стили для содержимого поповера, если нужно */
+  /* Например, для текста или фото */

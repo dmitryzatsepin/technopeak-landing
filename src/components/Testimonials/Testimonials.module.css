@@ -1,6 +1,7 @@
   .testimonial {
     /* Доп. стили для блока цитаты, если нужно */
     background-color: var(--mantine-color-body);
+    background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-8));
     padding: var(--mantine-spacing-lg);
     border-radius: var(--mantine-radius-md);
     border-left: rem(3px) solid var(--mantine-color-blue-6); /* Пример линии слева */

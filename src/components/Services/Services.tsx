@@ -1,4 +1,4 @@
-import { Container, Title, Text, SimpleGrid, Card, ThemeIcon, Button, rem } from '@mantine/core';
+import { Container, Title, Text, SimpleGrid, Card, ThemeIcon, Button, Box, rem } from '@mantine/core';
 import { IconArrowRight, IconCpu, IconDatabase, IconCloudComputing } from '@tabler/icons-react'; // Пример иконок
 import classes from './Services.module.css'; // Создай этот CSS-модуль
 
@@ -57,17 +57,20 @@ export function Services() {
   ));
 
   return (
-    <Container size="xl" py="xl" className={classes.wrapper} id="solutions"> {/* Добавлен ID */}
-      <Title order={2} ta="center" mt="sm">
-        Our Solutions
-      </Title>
-      <Text c="dimmed" ta="center" mt="md" mb="xl">
-        Tailored IT solutions designed to drive growth and efficiency for your business in the Middle East.
-      </Text>
+    <Box className={classes.wrapper} id="solutions">
+      {/* Внутренний Container для контента */}
+      <Container size="xl" py="xl">
+        <Title order={2} ta="center" mt="sm">
+          Our Solutions
+        </Title>
+        <Text c="dimmed" ta="center" mt="md" mb="xl">
+          Tailored IT solutions designed to drive growth and efficiency for your business in the Middle East.
+        </Text>
 
-      <SimpleGrid cols={{ base: 1, md: 2, lg: 3 }} spacing="xl" mt={50}>
-        {features}
-      </SimpleGrid>
-    </Container>
+        <SimpleGrid cols={{ base: 1, md: 2, lg: 3 }} spacing="xl" mt={50}>
+          {features}
+        </SimpleGrid>
+      </Container>
+    </Box>
   );
 }
