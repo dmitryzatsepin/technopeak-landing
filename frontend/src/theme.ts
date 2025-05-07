@@ -46,7 +46,7 @@ export const theme = createTheme({
   },
   },
   // Устанавливаем основной цвет (например, для кнопок без явного color)
-  primaryColor: 'accentPink',
+  //primaryColor: 'mantine-color-black',
 
   // Добавляем ваши фирменные цвета в палитру Mantine
   colors: {
@@ -78,38 +78,26 @@ export const theme = createTheme({
     },
     Badge: {
       defaultProps: {
-        radius: 0, // Для бейджей в Portfolio
+        radius: 0,
       },
     },
     ActionIcon: {
       defaultProps: {
-         // ActionIcon часто круглый, но если используете квадратные - можно задать radius: 0
-         // radius: 0,
       }
-    },
+    },  
     // Настройка Popover (Dropdown - это выпадающая часть)
     PopoverDropdown: {
       styles: {
-        dropdown: { borderRadius: '0 !important' } // Используем !important для надежности
+        dropdown: { borderRadius: '0 !important' }
       }
     },
     // Настройка Accordion
     Accordion: {
       styles: {
-          item: { borderRadius: 0 }, // Для контейнера элемента
-          control: { borderRadius: 0 }, // Для кликабельной части
-          panel: { borderRadius: 0 } // Для панели с контентом
+          item: { borderRadius: 0 },
+          control: { borderRadius: 0 },
+          panel: { borderRadius: 0 } 
       }
     },
-     // Другие компоненты, если необходимо...
-     // Например, для ThemeIcon (хотя он часто круглый по дизайну):
-     // ThemeIcon: {
-     //   defaultProps: {
-     //     radius: 0,
-     //   },
-     // },
   },
-
-  // Можно также установить глобальный радиус по умолчанию, но component overrides надежнее
-  // defaultRadius: 0,
 });

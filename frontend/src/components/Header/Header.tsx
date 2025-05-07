@@ -8,7 +8,7 @@ import { useWindowScroll } from '@mantine/hooks';
 import cx from 'clsx';
 import Logo from '../../assets/img/logo.png';
 import classes from './Header.module.css';
-import { IconCheck, IconX } from '@tabler/icons-react'; // Иконки для уведомлений
+import { IconCheck, IconX } from '@tabler/icons-react';
 
 // Примерная высота хедера для расчета отступа мобильного меню
 const HEADER_HEIGHT_PX = 80;
@@ -198,7 +198,6 @@ export function AppHeader() {
                                 withArrow
                                 shadow="md"
                                 radius={0}
-                                // Закрываем поповер при клике вне его, но не во время отправки
                                 closeOnClickOutside={!isSubmitting}
                             >
                                 <Popover.Target>
@@ -207,7 +206,6 @@ export function AppHeader() {
                                     variant="outline"
                                     radius={0}
                                     className={classes.contactButton}
-                                    // Сбрасываем статус при открытии, чтобы не висело старое уведомление
                                     onClick={() => { setPopoverOpened((o) => !o); setSubmitStatus(null); }}
                                   >
                                       Contact Us

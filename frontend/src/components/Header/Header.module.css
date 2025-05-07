@@ -37,38 +37,38 @@
 }
 
 /* Ссылки меню */
-.link {
+a.link {
   text-decoration: none;
   transition: color 0.3s ease;
   color: var(--mantine-color-white);
 }
-.link:hover {
+a.link:hover {
   color: var(--accent-green);
   text-decoration: none;
 }
-.header.scrolled .link {
+.header.scrolled a.link {
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
 }
-.header.scrolled .link:hover {
+.header.scrolled a.link:hover {
   color: var(--accent-green);
 }
 
 /* Кнопка Contact Us */
-.contactButton {
+button.contactButton {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
   border-color: var(--mantine-color-white);
   color: var(--mantine-color-white);
 }
-.contactButton:hover {
+button.contactButton:hover {
   background-color: var(--accent-green);
   border-color: var(--accent-green);
   color: var(--mantine-color-white);
 }
-.header.scrolled .contactButton {
+.header.scrolled button.contactButton {
   border-color: var(--accent-green);
   color: var(--accent-green);
 }
-.header.scrolled .contactButton:hover {
+.header.scrolled button.contactButton:hover {
   background-color: var(--accent-green);
   border-color: var(--accent-green);
   color: white;

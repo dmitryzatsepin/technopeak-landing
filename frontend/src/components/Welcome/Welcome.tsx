@@ -30,7 +30,7 @@ export function Welcome() {
 
   return (
     <Container size="xl" className={classNames(classes.container)}>
-      <Title className={classes.title} ta="left">
+      <Title className={classNames(classes.title)} ta="left">
         <span>Your trusted</span> <br />
         <span>CRM Integrator</span> <br />
         <Text inherit variant="gradient" component="span" gradient={{ from: 'accentPink', to: 'accentPink' }}>
@@ -39,7 +39,7 @@ export function Welcome() {
       </Title>
 
       <Group mt="xl" justify="flex-start">
-        <Button
+        <Button 
           size="md"
           variant="outline"
           radius={0}

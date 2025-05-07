@@ -23,7 +23,7 @@
   color: var(--mantine-color-white);
 }
 
-.button {
+button.freeTrial {
   width: 180px;
   height: 60px;
   font-size: 24px;
@@ -37,12 +37,31 @@
   color: var(--mantine-color-white);
 }
 
-.button:hover{
+button.freeTrial:hover{
   background: var(--accent-green);
   border: 2px solid var(--accent-green);
   color: var(--mantine-color-white);
 }
 
+button.learnMore {
+  width: 180px;
+  height: 60px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-right: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  border: 2px solid var(--mantine-color-white);
+  color: var(--mantine-color-white);
+}
+
+button.learnMore:hover{
+  background: var(--accent-green);
+  border: 2px solid var(--accent-green);
+  color: var(--mantine-color-white);
+}
 .debugBorder {
   border: 2px dashed red;
 }
