@@ -6,20 +6,18 @@ import {
   Title,
   Button,
   Group,
-  Modal,    // Импортируем Modal
-  TextInput, // Импортируем TextInput для полей формы
-  Stack,     // Импортируем Stack для удобного расположения полей
-  Box,       // Импортируем Box для тега form
+  Modal,
+  TextInput,
+  Stack,
+  Box,
 } from '@mantine/core';
 import { useForm } from '@mantine/form'; // Импортируем useForm
-// import { Link as ScrollLink } from 'react-scroll'; // Пока закомментируем, если кнопка будет открывать модалку
 import classes from './CallToAction.module.css';
 
 interface CallToActionProps {
   title: React.ReactNode;
   description: string;
   buttonText: string;
-  // scrollToId: string; // Пока не используется, если форма в модалке
 }
 
 // Определяем тип для значений формы
@@ -87,7 +85,6 @@ export function CallToAction({ title, description, buttonText }: CallToActionPro
               <Text className={classes.description} mt="sm" mb="md">
                 {description}
               </Text>
-              {/* <ScrollLink to={scrollToId} smooth duration={800}> */}
               <Button
                 variant="white"
                 color="dark"
