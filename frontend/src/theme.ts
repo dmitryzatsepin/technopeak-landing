@@ -35,8 +35,6 @@ export const theme = createTheme({
   fontFamily: `'Graphik LCG', sans-serif`, // Базовый шрифт для текста (<Text>, <Button>, etc.)
   headings: {
     fontFamily: `'Navigo', sans-serif`, // Шрифт для заголовков (<Title>)
-    // Можно задать вес по умолчанию для разных уровней заголовков
-    // fontWeight: '500', // Например, все заголовки Medium по умолчанию
     sizes: {
     h1: { fontWeight: '700' }, // h1 будет Bold
     h2: { fontWeight: '500' }, // h2 будет Medium
@@ -45,8 +43,6 @@ export const theme = createTheme({
     h5: { fontWeight: '200' }, // h5 будет Regular
   },
   },
-  // Устанавливаем основной цвет (например, для кнопок без явного color)
-  //primaryColor: 'mantine-color-black',
 
   // Добавляем ваши фирменные цвета в палитру Mantine
   colors: {

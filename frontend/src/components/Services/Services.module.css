@@ -1,8 +1,5 @@
 .wrapper {
-  /* Добавь общие стили для секции если нужно */
-  background-color: var(--mantine-color-gray-0); /* Пример фона для светлой темы */
-  /* Добавь селектор для темной темы, если нужно */
-  /* :global([data-mantine-color-scheme='dark']) & { background-color: var(--mantine-color-dark-6); } */
+  background-color: var(--mantine-color-gray-0);
 }
 
 .card {
@@ -15,11 +12,11 @@
   }
 }
 
-.learnMoreButton {
+/* .learnMoreButton {
     border-color: var(--accent-green);
     color: var(--accent-green);
 }
-.learnMoreButton:hover {
+button.learnMoreButton[data-hovered] {
     background-color: var(--accent-green);
     color: white;
-}
+} */

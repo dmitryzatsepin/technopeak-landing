@@ -39,21 +39,22 @@ const locations: LocationData[] = [
   {
     id: 'dubai',
     name: 'Dubai Office',
-    coords: { x: 59.5, y: 61 }, // Примерные координаты для ОАЭ (left: 59.5%, top: 61%)
+    coords: { x: 60, y: -52 }, // Примерные координаты для ОАЭ (left: 59.5%, top: 61%)
     image: dubaiImage,
     description: 'Our main hub in the Middle East, driving innovation.',
   },
   {
     id: 'london',
     name: 'London Office',
-    coords: { x: 48.8, y: 38.5 }, // Примерные координаты для UK (left: 48.8%, top: 38.5%)
+    coords: { x: 41.5, y: -72 }, // Примерные координаты для UK (left: 48.8%, top: 38.5%)
     image: londonImage,
     description: 'Connecting with European markets.',
   },
    {
     id: 'moscow',
     name: 'Moscow Office',
-    coords: { x: 56, y: 35 }, // Примерные координаты для Москвы
+    coords: { x: 50, y: -75
+     }, // Примерные координаты для Москвы
     image: moscowImage,
     description: 'Supporting our clients in Eastern Europe.',
   },
@@ -62,7 +63,7 @@ const locations: LocationData[] = [
   {
     id: 'canada',
     name: 'North America Office',
-    coords: { x: 22, y: 30 }, // Примерные координаты
+    coords: { x: 22, y: -72 }, // Примерные координаты
     image: londonImage, // Замени на реальное фото
     description: 'Serving clients across North America.',
   },
