@@ -166,3 +166,14 @@
   border-color: var(--accent-green);
   color: var(--mantine-color-white);
 }
+
+.notification {
+  position: fixed;
+  bottom: var(--mantine-spacing-md);
+  right: var(--mantine-spacing-md);
+  z-index: 1001; /* Выше хедера и меню */
+}
+
+.whiteLabel {
+  color: white; /* Цвет лейбла */
+}
