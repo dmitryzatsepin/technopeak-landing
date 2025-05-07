@@ -2,7 +2,7 @@
   width: 100%;
 }
 
-.title {
+:global(h1).title {
   color: var(--mantine-color-white);
   font-size: rem(80px);
   font-weight: 900;
@@ -10,7 +10,7 @@
 }
 
 @media (max-width: 768px) {
-  .title {
+  :global(h1).title {
     font-size: rem(50px);
   }
 }
