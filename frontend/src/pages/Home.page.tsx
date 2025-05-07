@@ -39,7 +39,7 @@ export function HomePage() {
         title={<>Ready to Boost <br/> Your Business?</>}
         description="Let's discuss how our tailored CRM solutions can drive growth and efficiency for your company."
         buttonText="Get a Free Consultation"
-        scrollToId="contact-form"
+        //scrollToId="contact-form"
       />
       <Box component="section" id="portfolio">
         <Portfolio />
@@ -55,7 +55,7 @@ export function HomePage() {
         title="Have Questions?"
         description="Our team is ready to answer all your questions and help you get started."
         buttonText="Contact Us Now"
-        scrollToId="contact-form"
+        //scrollToId="contact-form"
       />
       <Box component="section" id="contacts">
         <Footer />
