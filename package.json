@@ -2,7 +2,7 @@
     "name": "technopeak-monorepo",
     "private": true,
     "version": "1.0.0",
-    "description": "Монорепозиторий для TechnoPeak: frontend + backend",
+    "description": "Monorepo for TechnoPeak project",
     "scripts": {
       "dev": "pnpm -r run dev",
       "build": "pnpm -r run build",
@@ -16,9 +16,6 @@
       "test": "pnpm --filter frontend run test",
       "typecheck": "pnpm --filter frontend run typecheck"
     },
-    "workspaces": {
-      "packages": ["frontend", "backend"]
-    },
     "overrides": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
@@ -28,4 +25,4 @@
       "pnpm": ">=9.0.0 <10.0.0"
     },
     "packageManager": "pnpm@9.6.0"
-  }
+}
