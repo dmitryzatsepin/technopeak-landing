@@ -8,11 +8,9 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
-    "lint": "npm run eslint && npm run stylelint",
-    "eslint": "eslint . --cache",
-    "stylelint": "stylelint '**/*.css' --cache",
-    "prettier": "prettier --check \"**/*.{ts,tsx}\"",
-    "prettier:write": "prettier --write \"**/*.{ts,tsx}\"",
+    "lint": "biome check --apply .",
+    "format": "biome format --write .",
+    "biome:init": "biome init", 
     "vitest": "vitest run",
     "vitest:watch": "vitest",
     "test": "npm run typecheck && npm run vitest && npm run build",
@@ -20,15 +18,15 @@
     "storybook:build": "storybook build"
   },
   "dependencies": {
-    "@mantine/carousel": "^8.0.0",
-    "@mantine/charts": "^8.0.0",
+    "@mantine/carousel": "^8.0.2",
+    "@mantine/charts": "^8.0.2",
     "@mantine/code-highlight": "^8.0.2",
-    "@mantine/core": "^8.0.0",
-    "@mantine/dates": "^8.0.0",
-    "@mantine/form": "^8.0.0",
-    "@mantine/hooks": "^8.0.0",
-    "@mantine/modals": "^8.0.0",
-    "@mantine/notifications": "^8.0.0",
+    "@mantine/core": "^8.0.2",
+    "@mantine/dates": "^8.0.2",
+    "@mantine/form": "^8.0.2",
+    "@mantine/hooks": "^8.0.2",
+    "@mantine/modals": "^8.0.2",
+    "@mantine/notifications": "^8.0.2",
     "@tabler/icons-react": "^3.31.0",
     "classnames": "^2.5.1",
     "clsx": "^2.1.1",
@@ -69,12 +67,5 @@
     "vite": "^6.0.7",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.0.2"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@parcel/watcher",
-      "esbuild"
-    ]
-  },
-  "packageManager": "pnpm@10.6.1+sha512.40ee09af407fa9fbb5fbfb8e1cb40fbb74c0af0c3e10e9224d7b53c7658528615b2c92450e74cfad91e3a2dcafe3ce4050d80bda71d757756d2ce2b66213e9a3"
+  }
 }

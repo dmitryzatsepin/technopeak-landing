@@ -1,0 +1,26 @@
+# Установить поведение по умолчанию для всех текстовых файлов
+* text=auto eol=lf
+
+# Явно указать LF для файлов конфигурации и лок-файлов
+package.json text eol=lf
+pnpm-lock.yaml text eol=lf
+yarn.lock text eol=lf
+package-lock.json text eol=lf
+
+# Для файлов frontend
+frontend/package.json text eol=lf
+# Если у вас есть frontend/pnpm-lock.yaml (хотя его быть не должно в воркспейсе), добавьте и его
+# frontend/pnpm-lock.yaml text eol=lf
+
+# Можете добавить другие расширения текстовых файлов, если нужно
+*.js text eol=lf
+*.jsx text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.css text eol=lf
+*.scss text eol=lf
+*.html text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
