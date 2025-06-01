@@ -1,0 +1,32 @@
+/* src/layouts/ServicePageLayout.module.css */
+.pageWrapper {
+  background-color: var(--mantine-color-gray-0);
+  min-height: 100vh; 
+}
+
+.outerContentContainer { /* Стили для нового внешнего контейнера */
+  padding-top: calc(var(--header-height, 80px) + var(--mantine-spacing-md));
+  padding-bottom: var(--mantine-spacing-xl);
+}
+
+.breadcrumbLink {
+  color: var(--accent-green);
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.breadcrumbActive {
+  color: var(--mantine-color-dimmed);
+}
+
+
+.pageTitle {
+  color: var(--accent-green);
+}
+
+.serviceContent {
+  line-height: 1.7;
+  font-size: var(--mantine-font-size-md);
+}

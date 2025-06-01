@@ -1,29 +1,13 @@
 /* AnimatedNumbers.module.css */
-
-/* Класс для самого внешнего Box (если нужен общий фон на всю ширину) */
 .wrapper {
   background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-8));
-  /* Если фон не нужен на всю ширину, это правило можно удалить или закомментировать */
 }
 
-/* Класс для Container - здесь задаем паддинги и, если нужно, фон для контентной части */
 .innerContainer {
   padding-top: var(--mantine-spacing-xl);
   padding-bottom: calc(var(--mantine-spacing-xl) * 2);
-  /* Если фон .wrapper убран, можно задать фон здесь: */
-  /* background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-8)); */
 }
 
-/* УБИРАЕМ КЛАСС .section, так как он больше не используется на корневом элементе */
-/*
-.section {
-  padding: ...;
-  background-color: ...;
-  overflow: hidden;
-}
-*/
-
-/* Стили для .digitBox, .icon, .digit, .label остаются такими же, как в предыдущем варианте */
 .digitBox {
   background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-7));
   border-color: light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-5));
@@ -43,14 +27,14 @@
   transform: translateY(rem(-3px));
 }
 
-.icon {
-  line-height: 1;
-  margin-bottom: var(--mantine-spacing-sm);
-}
-
-.icon svg {
-   width: rem(44px);
-   height: rem(44px);
+.iconContainer {
+  color: var(--accent-green);
+  
+  & svg {
+    width: rem(36px);
+    height: rem(36px);
+    stroke: currentColor; /* Для иконок Tabler */
+  }
 }
 
 .digit {
@@ -71,9 +55,13 @@
   .digit {
     font-size: var(--mantine-font-size-xl * 2);
   }
-  .icon svg {
-    width: rem(36px);
-    height: rem(36px);
+  .iconContainer {
+  color: var(--accent-green);
+    & svg {
+      width: rem(36px);
+      height: rem(36px);
+      stroke: currentColor; /* Для иконок Tabler */
+    }
   }
   .label {
     font-size: var(--mantine-font-size-sm);

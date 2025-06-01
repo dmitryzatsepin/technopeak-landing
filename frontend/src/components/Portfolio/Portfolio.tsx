@@ -1,48 +1,18 @@
 // src/components/Portfolio/Portfolio.tsx
-
-import { Container, Title, Text, SimpleGrid, Card, Image, Badge, Stack,Button, Box, rem } from '@mantine/core';
+import { Container, Title, Text, SimpleGrid, Card, Image, Badge, Stack, Button, Box, rem } from '@mantine/core';
 import { IconArrowRight } from '@tabler/icons-react';
-import classes from './Portfolio.module.css'; // Убедитесь, что этот файл существует и содержит необходимые классы
+import { Link as RouterLink } from 'react-router-dom';
+import classes from './Portfolio.module.css';
 
-// --- ИМПОРТИРУЕМ ИЗОБРАЖЕНИЯ ---
-// Убедитесь, что пути верны относительно этого файла
-import case1ImageUrl from '../../assets/img/case1.png';
-import case2ImageUrl from '../../assets/img/case2.png';
-import case3ImageUrl from '../../assets/img/case3.png';
-// ---------------------------------
-
-const casesData = [
-  {
-    image: case1ImageUrl,
-    title: 'CRM Overhaul for Retail Giant',
-    category: 'Retail',
-    description: 'Complete CRM system implementation resulting in a 30% increase in sales efficiency.',
-    link: '/cases/retail-crm',
-  },
-  {
-    image: case2ImageUrl,
-    title: 'Cloud Migration for Finance Corp',
-    category: 'Finance',
-    description: 'Migrated legacy systems to a secure cloud infrastructure, improving performance and scalability.',
-    link: '/cases/finance-cloud',
-  },
-  {
-    image: case3ImageUrl,
-    title: 'Data Analytics Platform for Logistics Company with Extremely Long Name',
-    category: 'Logistics',
-    description: 'Developed a custom data analytics platform providing real-time insights into operations. This involved complex data warehousing and BI tool integration.',
-    link: '/cases/logistics-data',
-  },
-  // Добавьте больше кейсов по необходимости
-];
+import { casesData, CaseItem } from '../../data/portfolioData';
 
 export function Portfolio() {
-  const caseCards = casesData.map((caseItem) => (
+  const caseCards = casesData.map((caseItem: CaseItem) => (
     <Card
       key={caseItem.title}
       shadow="sm"
       padding="lg"
-      radius={0}
+      radius={'md'}
       withBorder
       className={classes.card}
     >
@@ -51,53 +21,48 @@ export function Portfolio() {
           src={caseItem.image}
           height={180}
           alt={caseItem.title}
-          fallbackSrc="https://via.placeholder.com/400x180?text=Image+Not+Found"
+          fallbackSrc="https://via.placeholder.com/400x180?text=Image+Not+Found" // Хорошая практика
         />
       </Card.Section>
 
-      <Stack justify="space-between" mt="md" mb="xs">
-        {/* Категория (category) - Graphik LCG Medium */}
+      <Stack justify="space-between" mt="md" mb="xs" gap="xs">
         <Badge
           color="accentPink"
           variant="light"
-          fw={300}
+          size="sm"
         >
           {caseItem.category}
         </Badge>
-        {/* Заголовок карточки (title) - Graphik LCG Medium */}
         <Text
-          fw={300}
-          lineClamp={1}
+          fw={500}
+          lineClamp={2}
           className={classes.cardTitle}
+          component="h3"
+          size="lg"
         >
           {caseItem.title}
         </Text>
       </Stack>
 
-      {/* Описание (description) - Graphik LCG Light */}
       <Text
         size="sm"
         c="dimmed"
         lineClamp={3}
         fw={300}
         className={classes.cardDescription}
+        mt="xs"
       >
         {caseItem.description}
       </Text>
 
-      {/* Кнопка - Graphik LCG Medium */}
       <Button
         className={classes.viewCaseButton}
-        component="a"
-        href={caseItem.link}
-        target="_blank"
-        rel="noopener noreferrer"
-        variant="light"
+        component={RouterLink} 
+        to={caseItem.link}
+        variant="outline"
+        mt="md"
         color="accentGreen"
-        fullWidth
-        mt="md" // Отступ сверху
-        rightSection={<IconArrowRight style={{ width: rem(14), height: rem(14) }} />}
-        fw={500}
+        rightSection={<IconArrowRight style={{ width: rem(16), height: rem(16) }} stroke={1.5} />}
       >
         View Case Study
       </Button>
@@ -105,15 +70,12 @@ export function Portfolio() {
   ));
 
   return (
-    // Контейнер секции
     <Box className={classes.wrapper} id="portfolio">
-      {/* Внутренний Container для контента */}
       <Container size="xl" py="xl">
         <Title
           order={2}
           ta="center"
           mt="sm"
-          fw={700}
           className={classes.sectionTitle}
         >
           Our Latest Cases
@@ -131,7 +93,8 @@ export function Portfolio() {
 
         <SimpleGrid
           cols={{ base: 1, sm: 2, lg: 3 }}
-          spacing="lg"
+          spacing={{ base: 'md', sm: 'lg', lg: 'xl' }} // Адаптивные отступы
+          verticalSpacing={{ base: 'md', sm: 'lg', lg: 'xl' }}
         >
           {caseCards}
         </SimpleGrid>

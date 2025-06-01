@@ -1,18 +1,10 @@
+// src/components/AnimatedNumbers/AnimatedNumbers.tsx
 import React from 'react';
-import { Box, Text, Title, Grid, Flex, Paper, Container, rem } from '@mantine/core'; // Импортируем Container
+import { Box, Text, Title, Grid, Flex, Paper, Container } from '@mantine/core';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
-import { FaProjectDiagram, FaSmile, FaCalendarAlt, FaUsers, FaAward } from 'react-icons/fa';
 import classes from './AnimatedNumbers.module.css';
-
-// Данные digitsData остаются без изменений
-const digitsData = [
-  { id: 'projects', number: 100, label: 'Projects Completed', icon: <FaProjectDiagram /> },
-  { id: 'clients', number: 50, label: 'Happy Clients', icon: <FaSmile /> },
-  { id: 'experience', number: 10, label: 'Years of Experience', icon: <FaCalendarAlt /> },
-  { id: 'employees', number: 200, label: 'Employees', icon: <FaUsers /> },
-  { id: 'awards', number: 5, label: 'Awards Received', icon: <FaAward /> },
-];
+import { digitsData, DigitItem } from '../../data/animatedNumbersData';
 
 export function AnimatedNumbers() {
   const { ref, inView } = useInView({
@@ -21,25 +13,21 @@ export function AnimatedNumbers() {
   });
 
   return (
-    // Внешний Box - ТОЛЬКО для useInView ref и ID
-    // Убираем className={classes.section} отсюда
-    <Box ref={ref} id="numbers" className={classes.wrapper}> {/* Добавляем класс для возможного внешнего фона */}
-      {/* Используем Container для ограничения ширины и задания фона/паддингов */}
+    <Box ref={ref} id="numbers" className={classes.wrapper}>
       <Container size="xl" className={classes.innerContainer}>
-        {/* Обертка для Grid с overflow: hidden */}
-        <Box style={{ overflow: 'hidden' }}>
+        <Box> 
           <Grid gutter="xl" justify="center">
-            {digitsData.map((item) => (
-              <Grid.Col key={item.id} span={{ base: 12, xs: 6, md: 4, lg: 'auto' }}>
-                <Paper withBorder radius={0} className={classes.digitBox} p="lg">
+            {digitsData.map((item: DigitItem) => (
+              <Grid.Col key={item.id} span={{ base: 12, xs: 6, sm: 4, md: 'auto' }}>
+                <Paper withBorder radius="md" className={classes.digitBox} p="lg">
                   <Flex direction="column" align="center" gap="md">
-                    <Box className={classes.icon} c="accentGreen">
+                    <Box className={classes.iconContainer}>
                       {item.icon}
                     </Box>
                     <Title order={2} className={classes.digit}>
-                      {inView ? <CountUp end={item.number} duration={2.5} /> : '0'} +
+                      {inView ? <CountUp end={item.number} duration={2.5} suffix=" +" /> : `0 +`}
                     </Title>
-                    <Text size="md" className={classes.label}>
+                    <Text size="md" ta="center" className={classes.label}>
                       {item.label}
                     </Text>
                   </Flex>
@@ -47,7 +35,7 @@ export function AnimatedNumbers() {
               </Grid.Col>
             ))}
           </Grid>
-        </Box> {/* Конец обертки для Grid */}
+        </Box>
       </Container>
     </Box>
   );
