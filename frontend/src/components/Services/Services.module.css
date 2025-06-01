@@ -12,11 +12,17 @@
   }
 }
 
-/* .learnMoreButton {
+.learnMoreButton {
+  &[data-variant="outline"] {
     border-color: var(--accent-green);
     color: var(--accent-green);
+  }
+    
 }
-button.learnMoreButton[data-hovered] {
+.learnMoreButton:hover{
+  &[data-variant="outline"] {
     background-color: var(--accent-green);
-    color: white;
-} */
+    border-color: var(--accent-green);
+    color: var(--mantine-color-white);
+  }
+}

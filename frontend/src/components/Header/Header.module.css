@@ -119,52 +119,40 @@ button.contactButton:hover {
 }
 
 
-/* --- Стили для Popover --- */
-.popoverDropdown {
-  background-color: rgba(30, 30, 30, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(4px);
-  border-radius: 0 !important;
+/* --- Popover Styles --- */
+:global(.mantine-Popover-dropdown).popoverDropdown {
+    background-color: rgba(30, 30, 30, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px); 
+    margin-top: 10px;
 }
 
-.formTitle {
-  color: white;
+:global(.mantine-Text-root).formTitle {
+  color: var(--mantine-color-white);
   text-align: center;
-  margin-bottom: var(--mantine-spacing-md);
+  /* margin-bottom: var(--mantine-spacing-xl); */
   font-size: var(--mantine-font-size-lg);
 }
 
-.transparentInput {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: white;
-  border-radius: 0 !important;
-}
-.transparentInput::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.whiteLabel {
-  color: white !important;
-  font-weight: normal;
-  margin-bottom: var(--mantine-spacing-xs);
-}
-
 .submitButton {
-  margin-top: var(--mantine-spacing-lg);
-  margin-bottom: var(--mantine-spacing-sm);
-  width: 100%;
-  background: transparent;
-  color: var(--mantine-color-white);
-  border: 1px solid var(--mantine-color-white);
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-  font-size: var(--mantine-font-size-md);
-  border-radius: 0 !important;
+  &[data-variant="outline"] {
+    margin-top: var(--mantine-spacing-lg);
+    margin-bottom: var(--mantine-spacing-sm);
+    width: 100%;
+    background: transparent;
+    color: var(--mantine-color-white);
+    border: 1px solid var(--mantine-color-white);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-size: var(--mantine-font-size-md);
+    border-radius: 0 !important;
+  }
 }
 .submitButton:hover {
-  background-color: var(--accent-green);
-  border-color: var(--accent-green);
-  color: var(--mantine-color-white);
+  &[data-variant="outline"] {
+    background-color: var(--accent-green);
+    border-color: var(--accent-green);
+    color: var(--mantine-color-white);
+  }
 }
 
 .notification {

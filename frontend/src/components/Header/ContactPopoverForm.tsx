@@ -79,7 +79,7 @@ export function ContactPopoverForm({ onFormSubmitSuccess }: ContactPopoverFormPr
       <LoadingOverlay visible={isSubmitting} overlayProps={{ radius: 0, blur: 2 }} />
       <form onSubmit={form.onSubmit(handleFormSubmit)}>
         <Text size="sm" className={classes.formTitle}>
-          Let’s Build Something Great Together!
+          <p>Let’s Build Something Great Together!</p> 
         </Text>
         <TextInput
           label="Name" placeholder="Your name" required mb="md" radius={0}

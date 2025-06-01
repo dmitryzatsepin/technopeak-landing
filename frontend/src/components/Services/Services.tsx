@@ -2,7 +2,6 @@ import { Container, Title, Text, SimpleGrid, Card, ThemeIcon, Button, Box, rem }
 import { IconArrowRight, IconCpu, IconDatabase, IconCloudComputing } from '@tabler/icons-react';
 import classes from './Services.module.css';
 
-// Пример данных. В реальном приложении они могут приходить из API или CMS
 const solutionsData = [
   {
     icon: IconCpu,
@@ -40,7 +39,9 @@ export function Services() {
       <Text fz="sm" c="dimmed" mt="sm">
         {solution.description}
       </Text>
-      <Button className={classes.learnMoreButton} 
+      <Button classNames={{
+        root: classes.learnMoreButton
+      }} 
         component="a"
         href={solution.link}
         variant="outline"

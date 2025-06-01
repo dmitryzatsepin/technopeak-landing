@@ -2,8 +2,8 @@
 import { useState } from 'react';
 import { Group, Anchor, Text, Button, Popover } from '@mantine/core';
 import { ContactPopoverForm } from './ContactPopoverForm';
-import classes from './Header.module.css'; // Используем те же стили
-import { HEADER_HEIGHT_PX } from '../../hooks/useHeaderState'; // Или из констант
+import classes from './Header.module.css';
+import { HEADER_HEIGHT_PX } from '../../hooks/useHeaderState';
 
 interface MenuItem {
   label: string;
@@ -50,13 +50,17 @@ export function DesktopNavigation({ menuItems }: DesktopNavigationProps) {
       <Group gap="md">{links}</Group>
       <Popover
         opened={popoverOpened}
-        onChange={setPopoverOpened} // Mantine сам управляет этим
+        onChange={setPopoverOpened}
         width={300}
         position="bottom-end"
         withArrow
-        shadow="md"
+        shadow="xl"
         radius={0}
-        // closeOnClickOutside={!isSubmitting} // isSubmitting здесь нет, Popover закроется
+        offset={10}
+        classNames={{
+          dropdown: classes.popoverDropdown,
+          arrow: classes.popoverArrow,
+        }}
       >
         <Popover.Target>
           <Button
