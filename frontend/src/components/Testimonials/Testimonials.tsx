@@ -31,7 +31,7 @@ export function Testimonials() {
   const items = testimonialsData.map((testimonial) => (
     <Blockquote
       key={testimonial.name}
-      color="accentPink"
+      color="white"
       cite={
         <>
           <Avatar src={testimonial.avatar} radius="xl" mr="sm" />

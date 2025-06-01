@@ -1,0 +1,51 @@
+/* src/layouts/CaseStudyPageLayout.module.css */
+.pageWrapper {
+  background-color: var(--mantine-color-gray-0);
+  padding-top: var(--header-height, 80px);
+  min-height: 100vh;
+  display: flex; /* Для прижатия футера вниз, если контента мало */
+  flex-direction: column; /* Для прижатия футера вниз */
+}
+
+.contentArea {
+  padding-bottom: var(--mantine-spacing-xl);
+  flex-grow: 1; /* Для прижатия футера вниз */
+}
+
+
+.breadcrumbLink {
+  color: var(--mantine-color-anchor);
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.breadcrumbActive {
+  color: var(--mantine-color-dimmed);
+}
+
+
+.pageTitle {
+  color: var(--accent-green); /* Используем ваш акцентный цвет */
+}
+
+.caseStudyContent {
+  line-height: 1.7;
+  font-size: var(--mantine-font-size-md);
+}
+
+.caseStudyContent h3 { /* Пример стилей для подзаголовков внутри контента кейса */
+  margin-top: var(--mantine-spacing-xl);
+  margin-bottom: var(--mantine-spacing-md);
+  color: var(--mantine-color-dark-filled); /* или var(--accent-green) */
+}
+
+.caseStudyContent p {
+  margin-bottom: var(--mantine-spacing-md);
+}
+
+.caseStudyContent ul {
+  margin-bottom: var(--mantine-spacing-md);
+  padding-left: var(--mantine-spacing-lg);
+}

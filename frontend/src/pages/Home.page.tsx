@@ -8,7 +8,6 @@ import { AppHeader } from '../components/Header/Header';
 import { HeroSection } from '../components/HeroSection/HeroSection';
 import { AnimatedNumbers } from '../components/AnimatedNumbers/AnimatedNumbers';
 import { LocationsMap } from '../components/LocationsMap/LocationsMap';
-import { TimelineSlider } from '../components/TimelineSlider/TimelineSlider';
 import { Services } from '../components/Services/Services';
 import { CallToAction } from '../components/CallToAction/CallToAction';
 import { Portfolio } from '../components/Portfolio/Portfolio';

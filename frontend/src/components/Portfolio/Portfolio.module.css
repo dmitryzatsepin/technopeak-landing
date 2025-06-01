@@ -9,13 +9,17 @@
 }
 
 .viewCaseButton {
+  &[data-variant="outline"] {
     border-color: var(--accent-green);
     color: var(--accent-green);
-    background-color: var(--mantine-white);
+  }
 }
 .viewCaseButton:hover {
+    &[data-variant="outline"] {
     background-color: var(--accent-green);
-    color: white;
+    border-color: var(--accent-green);
+    color: var(--mantine-color-white);
+  }
 }
 
 .wrapper {
