@@ -16,6 +16,7 @@ import { LogoMarquee } from '../components/LogoMarquee/LogoMarquee';
 import { Testimonials } from '../components/Testimonials/Testimonials';
 import { Faq } from '../components/Faq/Faq';
 import { Footer } from '../components/Footer/Footer';
+import { ScrollTest } from '../components/ScrollTest';
 
 
 export function HomePage() {
@@ -57,6 +58,7 @@ export function HomePage() {
         buttonText="Contact Us Now"
         //scrollToId="contact-form"
       />
+      <ScrollTest />
       <Box component="section" id="contacts">
         <Footer />
       </Box>
